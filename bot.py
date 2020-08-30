@@ -1,7 +1,11 @@
 from instapy import InstaPy
 
-session = InstaPy(username='', password='',want_check_browser=False)
+session = InstaPy(username='', password='', want_check_browser=False)
 session.login()
+# Теперь бот будет игнорировать любое изображение, которое ClarifApi посчитает NSFW.
+# 5000 обращений в месяц – бесплатно. https://www.clarifai.com/
+session.set_use_clarifai(enabled=True, api_key='<your_api_key>')
+session.clarifai_check_img_for(['nsfw'])
 session.set_do_like(enabled=False, percentage=70) # 70 % постів буде лайкнуто в лєнті
 session.set_do_follow(enabled=False, percentage=25, times=1) # Зробить фолов 25% аккаунтів яких побачить
 # session.set_comments(comments=['Найс відео'], media='Video') Коментар для відео
