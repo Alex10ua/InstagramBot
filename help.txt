@@ -1,0 +1,3 @@
+#Для визначення локації потрібно на сайті інстаграма вибрати потрібне місце
+#і взяти з адресної строки дані після location https://www.instagram.com/explore/locations/212898659/kyiv-ukraine/
+#218527848/chernivtsi/
